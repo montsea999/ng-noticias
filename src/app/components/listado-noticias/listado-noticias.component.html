@@ -1,0 +1,21 @@
+<div class="container-fluid"></div>
+<div class="row mt-3">
+<!--itero con un ngFor el listadoNoticias-->
+    <div class="col-10 offset-1 my-1 text-center divCol" *ngFor="let noticia of listadoNoticias">
+      <div class="card p-3">
+
+        <img [src]="noticia.urlToImage" class="card-img-top" alt="imagen de una noticia">
+        <div class="card-body">
+          <span class="card-title badge bg-warning p-2 h6">{{noticia.source.name}}</span>
+          <p class="card-text text-primary">{{noticia.description}}</p>
+          <a [href]="noticia.url" target="_blank" class="btn btn-outline-primary btn-block btn-lg text-warning fw-bolder"><h5>Ver noticia</h5></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+

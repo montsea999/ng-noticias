@@ -1,0 +1,47 @@
+<div class="container mt-3">
+
+    <form (ngSubmit)="buscarNoticia()">
+<div class="row">
+    <div class="col-6 text-center">
+
+    <div class="mt-4 m-1 p-5 bg-primary text-white rounded">
+      <h3 class="text-center">PAIS</h3>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="btn btn-muted disabled input-group-text" for="inputGroupSelect01">Elige</label>
+        </div>
+        <select name="pais"  placeholder="Pais.." [(ngModel)]="paisSeleccionado" class="custom-select" id="inputGroupSelect01">
+          <option  [value]="pais.value" *ngFor="let pais of paises">{{pais.name}}</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-6 text-center">
+    <div class="mt-4  m-1 p-5 bg-primary text-white rounded">
+        <h3 class="text-center">CATEGORIA</h3>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="btn btn-muted disabled input-group-text" for="inputGroupSelect01">Elige</label>
+          </div>
+          <select name="categoria" [(ngModel)]="categoriaSeleccionada" class="custom-select">
+            <option *ngFor="let categoria of categorias" [value]="categoria.value" >{{categoria.name}}</option>
+            <option value="deportes">Deportes</option>
+
+          </select>
+        </div>
+    </div>
+
+    </div>
+</div>
+<div class="d-grid gap-2 mt-2 mx-1">
+    <button type="submit" class="btn btn-outline-primary btn-lg col-12 mx-auto p-3"><h4>Buscar</h4></button>
+  </div>
+</form>
+
+
+
+
+</div>
+

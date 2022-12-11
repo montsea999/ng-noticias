@@ -1,0 +1,10 @@
+<div class="container-fluid">
+<app-navbar [titulo]="titulo"></app-navbar>
+
+
+<app-formulario (seleccion)="h($event)" ></app-formulario>
+<app-spinner *ngIf="loadNoticias"></app-spinner>
+<div class="row-10">
+<app-listado-noticias [listadoNoticias]="listadoNoticias"></app-listado-noticias>
+</div>
+</div>
