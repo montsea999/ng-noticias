@@ -36,3 +36,10 @@ setTimeout(() => {
 }, 1500);
 }
 }
+
+//En el archivo app.component.html se reciben los datos que envio por output el componente FormularioComponent
+//que activa el metodo h() que recibe como parametro el objeto SELECCION del formulario del componente FormularioComponent
+//y hace la peticion http GET a la api
+// Dentro de la funcion h, setTimeout() es la que se suscribe al observable que devuelve el metodo getNoticias()
+//del servicio tras 1.5 segundos de espera para que pueda mostrar el spinner
+

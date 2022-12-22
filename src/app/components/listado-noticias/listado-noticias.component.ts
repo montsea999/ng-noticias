@@ -15,6 +15,6 @@ export class ListadoNoticiasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+// se recibe por @Input() el listado de noticias que se envia desde el componente padre app.component.ts
 
 }

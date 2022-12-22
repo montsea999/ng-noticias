@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  //paso los parametros seleccionados al padre a traves de un @Output()
+  //paso los parametros seleccionados a traves de un @Output()
   @Output() seleccion = new EventEmitter<any>();
 
 
@@ -60,7 +60,11 @@ export class FormularioComponent implements OnInit {
   }
 
 
-
+// El metodo buscarNoticia() crea un objeto con los parametros seleccionados en el formulario
+//y los envia al servicio NoticiaService
+// El padre es el componente ListadoNoticiasComponent que se suscribe al @Output() seleccion y recibe el objeto con los parametros seleccionados
+// en el formulario del componente FormularioComponent
+//
 
 
 
